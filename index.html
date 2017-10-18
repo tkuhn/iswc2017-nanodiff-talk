@@ -1,0 +1,172 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Reliable Granular References to Changing Linked Data</title>
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/white.css">
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+<h2>Reliable Granular References to Changing Linked Data</h2>
+<p><strong>Tobias Kuhn</strong>, Egon Willighagen, Chris Evelo, Núria Queralt-Rosinach, Emilio Centeno, Laura I. Furlong</p>
+<p>Work to be presented at ISWC 2017</p>
+</section>
+
+<section>
+<h3>Specify Input Data</h3>
+<p>Researchers should be able to exactly specify what dataset they are using as input.</p>
+<p><strong>Current best practice in the papers:</strong></p>
+<quote>
+"... we used DisGeNET-RDF version 4.0 [32]"
+</quote>
+<p><strong>And in the code:</strong></p>
+<pre>
+wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
+# Run analysis here
+</pre>
+</section>
+
+<section>
+<h3>Related Work</h3>
+<p>Approaches exist on each of:</p>
+<ul>
+<li>Linked Data versioning</li>
+<li>Cryptographically reliable dataset identifiers</li>
+<li>References to subsets of larger datasets</li>
+</ul>
+<p>But no approaches exist that cover all three of them.</p>
+</section>
+
+<section>
+<h3>Nanopublications</h3>
+<img class="plain stretch" src="img/nanopub.svg"/>
+</section>
+
+<section>
+<h3>9M Nanopublications on the Server Network</h3>
+<img class="plain stretch" src="img/npmonitor.png"/>
+</section>
+
+<section>
+<h3>The "Overhead" of Nanopublications</h3>
+<img class="plain stretch" src="img/nanopub-inspection.svg"/>
+</section>
+
+<section data-transition="slide none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes2.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes3.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes4.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes5.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes6.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Approach: Granual Versioning</h3>
+<img class="plain stretch" src="img/changes.svg"/>
+</section>
+
+<section>
+<h3>Evaluation 1</h3>
+<p><strong>How well does it work on the data publisher side?</strong></p>
+<p>Evaluation based on WikiPathways, a community-curated open database of biological pathways</p>
+<p>Nanopublication version of WikiPathways dataset:</p>
+<ul>
+<li>~ 10 000 nanopublications
+<li>Monthly releases over 11 months
+</ul>
+</section>
+
+<section>
+<h3>WikiPathways Versions</h3>
+<img class="plain stretch" src="img/wp-monthly.svg"/>
+</section>
+
+<section>
+<h3>Evaluation 2</h3>
+<p><strong>How well does it work on the data consumer side?</strong></p>
+<p>Evaluation based on DisGeNET, a database on human diseases and their related genes</p>
+<p>Nanopublication version of DisGeNET version 4.0:</p>
+<ul>
+<li>1 414 902 nanopublications
+<li>Highly cited: 31 publications in 2017 (until 5 May)
+</ul>
+</section>
+
+<section>
+<h3>Used DisGeNET Subsets</h3>
+<img class="plain stretch" src="img/disgenet-subsets-hist.svg"/>
+</section>
+
+<section>
+<h3>Evaluation 3</h3>
+<p><strong>How fast is the download of a typical subset?</strong></p>
+<p>Downloading full dataset from DisGeNET server</p>
+<p><strong>VERSUS</strong></p>
+<p>Downloading 18 098 nanopublications through the server network</p>
+</section>
+
+<section>
+<h3>Download Times</h3>
+<img class="plain stretch" src="img/time-eval.svg"/>
+</section>
+
+<section>
+<h3>Data Publishing with Nanopublication Datasets</h3>
+<p>Researchers can now exactly specify their input data.</p>
+<p><strong>In papers:</strong></p>
+<quote>
+"... we used DisGeNET [27]"
+<br/>
+<small>[27] Nanopubs extracted from DisGeNET v4.0.0.0. Nanopublication index http://purl.org/np/RAu0PUrg-M8HxkOiYRXkTg7r9fgOIzFZNINj8q7ywN
+rdM, 9 May 2017.</small>
+</quote>
+<p><strong>In the code:</strong></p>
+<pre>
+np get -c -o data.trig \
+  RAxMyDRaM8RmKGNiEe7dQPRUTuz616iI-N2T-H3MPYmXk
+# Run analysis here
+</pre>
+</section>
+
+<section>
+<h3>Nanopublication Datasets Pay Off</h3>
+<p>Price of nanopublication approach is offset by:</p>
+<ul>
+<li>the benefits of incremental versioning</li>
+<li>and by being able to refer to exactly the needed subset of a given dataset</li>
+</section>
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script src="init.js"></script>
+</body>
+</html>
