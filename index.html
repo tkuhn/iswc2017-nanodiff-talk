@@ -19,7 +19,8 @@ color: #d66;
 <div class="reveal">
 <div class="slides">
 
-<section>
+<section data-background-image="img/sand.jpg">
+<!-- Image source: http://www.wujinshike.com/data/wallpapers/225/WDF_2622411.jpg -->
 <h2><span class="cem">Reliable Granular References to Changing Linked Data</span></h2>
 <p><strong>Tobias Kuhn</strong>, Egon Willighagen, Chris Evelo, Núria Queralt-Rosinach, Emilio Centeno, Laura I. Furlong</p>
 <p>International Semantic Web Conference (ISWC)<br/> Vienna, 2017</p>
@@ -32,11 +33,11 @@ color: #d66;
 <p>Reproducible (Linked) Data Science is complicated...</p>
 </section>
 
-<section>
+<section data-background-image="img/science-bright.jpg">
 <h3>Reproducible (Linked) Data Science is Complicated</h3>
-<p>It's complicated because:</p>
+<p>Even just <span class="cem">specifying the used input data</span> is complicated, because:</p>
 <ul>
-<li class="fragment fade-in">We often use <span class="cem">multiple datasets</span></li>
+<li class="fragment fade-in">We often use <span class="cem">multiple datasets</span> from different <span class="cem">third parties</span></li>
 <li class="fragment fade-in">But often just specific <span class="cem">subsets</span> of these datasets</li>
 <li class="fragment fade-in">And they often have many <span class="cem">different versions</span></li>
 <li class="fragment fade-in">And finally we publish everything in <span class="cem">papers</span>, which are not designed to reproducibly report such studies</li>
@@ -44,13 +45,12 @@ color: #d66;
 </section>
 
 <section>
-<h3>Specify Input Data</h3>
-<p>Researchers should be able to exactly specify what dataset they are using as input.</p>
-<p><strong>Current best practice in the papers:</strong></p>
+<h3>Specify Input Data:<br/>Current Best Practice</h3>
+<p><strong><span class="cem">In papers:</span></strong></p>
 <quote>
 "... we used DisGeNET-RDF version 4.0 [32]"
 </quote>
-<p><strong>And in the code:</strong></p>
+<p><strong><span class="cem">In code:</span></strong></p>
 <pre>
 wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 # Run analysis here
@@ -58,14 +58,14 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 </section>
 
 <section>
-<h3>Related Work</h3>
-<p>Approaches exist on each of:</p>
+<h3>Requirements and Related Work</h3>
+<p>We need:</p>
 <ul>
-<li>Linked Data versioning</li>
-<li>Cryptographically reliable dataset identifiers</li>
-<li>References to subsets of larger datasets</li>
+<li>Linked Data <span class="cem">versioning</span></li>
+<li><span class="cem">Cryptographically reliable</span> dataset identifiers</li>
+<li>References to <span class="cem">subsets</span> of larger datasets</li>
 </ul>
-<p>But no approaches exist that cover all three of them.</p>
+<p>Related work exists for each of these points individually, but not for the combination of them.</p>
 </section>
 
 <section>
@@ -76,11 +76,18 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 <section>
 <h3>9M Nanopublications on the Server Network</h3>
 <img class="plain stretch" src="img/npmonitor.png"/>
+<p><small><a href="http://purl.org/nanopub/monitor">http://purl.org/nanopub/monitor</a></small></p>
 </section>
 
 <section>
 <h3>The "Overhead" of Nanopublications</h3>
 <img class="plain stretch" src="img/nanopub-inspection.svg"/>
+</section>
+
+<section>
+<h3>Trusty URIs</h3>
+<img class="plain stretch" src="img/trustyuris.svg"/>
+<p><small><a href="http://trustyuri.net">http://trustyuri.net</a></small></p>
 </section>
 
 <section data-transition="slide none">
@@ -221,14 +228,14 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 <section>
 <h3>Data Publishing with Nanopublication Datasets</h3>
 <p>Researchers can now exactly specify their input data.</p>
-<p><strong>In papers:</strong></p>
+<p><strong><span class="cem">In papers:</span></strong></p>
 <quote>
 "... we used DisGeNET [27]"
 <br/>
 <small>[27] Nanopubs extracted from DisGeNET v4.0.0.0. Nanopublication index http://purl.org/np/RAu0PUrg-M8HxkOiYRXkTg7r9fgOIzFZNINj8q7ywN
 rdM, 9 May 2017.</small>
 </quote>
-<p><strong>In the code:</strong></p>
+<p><strong><span class="cem">In code:</span></strong></p>
 <pre>
 np get -c -o data.trig \
   RAxMyDRaM8RmKGNiEe7dQPRUTuz616iI-N2T-H3MPYmXk
@@ -242,6 +249,11 @@ np get -c -o data.trig \
 <ul>
 <li>the benefits of incremental versioning</li>
 <li>and by being able to refer to exactly the needed subset of a given dataset</li>
+</section>
+
+<section>
+<h3>Future Work</h3>
+<p>TODO</p>
 </section>
 
 </div>
