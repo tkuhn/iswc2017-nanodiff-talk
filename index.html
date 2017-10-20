@@ -4,6 +4,15 @@
 <title>Reliable Granular References to Changing Linked Data</title>
 <link rel="stylesheet" href="css/reveal.css">
 <link rel="stylesheet" href="css/theme/white.css">
+<style>
+p.sourcenote {
+font-size: 8pt;
+margin-top: 0px;
+}
+span.cem {
+color: #d66;
+}
+</style>
 </head>
 
 <body>
@@ -11,9 +20,27 @@
 <div class="slides">
 
 <section>
-<h2>Reliable Granular References to Changing Linked Data</h2>
+<h2><span class="cem">Reliable Granular References to Changing Linked Data</span></h2>
 <p><strong>Tobias Kuhn</strong>, Egon Willighagen, Chris Evelo, Núria Queralt-Rosinach, Emilio Centeno, Laura I. Furlong</p>
 <p>International Semantic Web Conference (ISWC)<br/> Vienna, 2017</p>
+</section>
+
+<section>
+<h3>Reproducibility</h3>
+<img class="plain stretch" src="img/science.jpg"/>
+<p class="sourcenote"><a href="https://scholarlykitchen.sspnet.org/2017/05/24/reproducible-research-just-not-reproducible/">[image source]</a></p>
+<p>Reproducible (Linked) Data Science is complicated...</p>
+</section>
+
+<section>
+<h3>Reproducible (Linked) Data Science is Complicated</h3>
+<p>It's complicated because:</p>
+<ul>
+<li class="fragment fade-in">We often use <span class="cem">multiple datasets</span></li>
+<li class="fragment fade-in">But often just specific <span class="cem">subsets</span> of these datasets</li>
+<li class="fragment fade-in">And they often have many <span class="cem">different versions</span></li>
+<li class="fragment fade-in">And finally we publish everything in <span class="cem">papers</span>, which are not designed to reproducibly report such studies</li>
+</ul>
 </section>
 
 <section>
@@ -93,7 +120,7 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 
 <section>
 <h3>Evaluation 1</h3>
-<p><strong>How well does it work on the data publisher side?</strong></p>
+<p><strong><span class="cem">How well does it work on the data publisher side?</span></strong></p>
 <p>Evaluation based on WikiPathways, a community-curated open database of biological pathways</p>
 <p>Nanopublication version of WikiPathways dataset:</p>
 <ul>
@@ -109,7 +136,7 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 
 <section>
 <h3>Evaluation 2</h3>
-<p><strong>How well does it work on the data consumer side?</strong></p>
+<p><strong><span class="cem">How well does it work on the data consumer side?</span></strong></p>
 <p>Evaluation based on DisGeNET, a database on human diseases and their related genes</p>
 <p>Nanopublication version of DisGeNET version 4.0:</p>
 <ul>
@@ -124,16 +151,11 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 </section>
 
 <section>
-<h3>Evaluation 3</h3>
-<p><strong>How fast is the download of a typical subset?</strong></p>
+<h3>Download of Typical Subset</h3>
 <p>Downloading full dataset from DisGeNET server</p>
 <p><strong>VERSUS</strong></p>
 <p>Downloading 18 098 nanopublications through the server network</p>
-</section>
-
-<section>
-<h3>Download Times</h3>
-<img class="plain stretch" src="img/time-eval.svg"/>
+<img class="fragment plain" src="img/time-eval.svg"/>
 </section>
 
 <section>
