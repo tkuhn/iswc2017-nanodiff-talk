@@ -12,6 +12,14 @@ margin-top: 0px;
 span.cem {
 color: #d66;
 }
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+text-transform: none;
+}
 </style>
 </head>
 
@@ -65,12 +73,37 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 <li><span class="cem">Cryptographically reliable</span> dataset identifiers</li>
 <li>References to <span class="cem">subsets</span> of larger datasets</li>
 </ul>
-<p>Related work exists for each of these points individually, but not for the combination of them.</p>
+<p>Related work exists for each of these points individually, but not for their combination.</p>
 </section>
 
 <section>
 <h3>Nanopublications</h3>
 <img class="plain stretch" src="img/nanopub.svg"/>
+<p><small><a href="http://nanopub.org">http://nanopub.org</a></small></p>
+</section>
+
+<section>
+<h3>Trusty URIs</h3>
+<img class="plain" width="120pt" src="img/trustyuri-logo.svg"/><br/>
+<img class="plain stretch" src="img/trustyuris.svg"/>
+<p><small><a href="http://trustyuri.net">http://trustyuri.net</a></small></p>
+</section>
+
+<section data-transition="slide none">
+<h3>Trusty Nanopublications</h3>
+<img class="plain stretch" src="img/trustynanopubs1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Trusty Nanopublications</h3>
+<img class="plain stretch" src="img/trustynanopubs2.svg"/>
+</section>
+</section>
+
+<section data-transition="none">
+<h3>Trusty Nanopublications</h3>
+<img class="plain stretch" src="img/trustynanopubs.svg"/>
+</section>
 </section>
 
 <section>
@@ -85,9 +118,32 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 </section>
 
 <section>
-<h3>Trusty URIs</h3>
-<img class="plain stretch" src="img/trustyuris.svg"/>
-<p><small><a href="http://trustyuri.net">http://trustyuri.net</a></small></p>
+<h3>Decontextualizing</h3>
+<p><span class="cem">For comparison,</span> we can decontextualize the triples of the nanopublications of a given dataset:</p>
+<ul>
+<li>Attach provenance/metadata to entire dataset (instead of individual nanopublication)</li>
+<li>Drop context (graph) URI</li>
+<li>Count unique triples</li>
+</ul>
+<p><span class="cem">Measures hypothetical size of a nanopublication dataset if no nanopublications would have been used</span></p>
+</section>
+
+<section>
+<h3>Decontextualized Datasets</h3>
+<small>
+<table>
+<tr><th>Dataset</th><th>relative size after decontextualization</th></tr>
+<tr><td>LIDDI</td><td>82%</td></tr>
+<tr><td>neXtProt</td><td>55%</td></tr>
+<tr><td>GeneRIF-AIDA</td><td>43%</td></tr>
+<tr><td>DisGeNET v4.0.0.0</td><td><span class="cem">14%</span></td></tr>
+<tr><td>DisGeNET v3.0.0.0</td><td><span class="cem">14%</span></td></tr>
+<tr><td>DisGeNET v2.1.0.0</td><td><span class="cem">14%</span></td></tr>
+<tr><td>OpenBEL 20131211</td><td>69%</td></tr>
+<tr><td>OpenBEL 1.0</td><td>69%</td></tr>
+</table>
+</small>
+<p>Can we better represent the <span class="cem">overlap between dataset versions</span> to counter this significant overhead?</p>
 </section>
 
 <section data-transition="slide none">
@@ -173,8 +229,7 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 <section>
 <h3>Evaluation 1</h3>
 <p><strong><span class="cem">How well does it work on the data publisher side?</span></strong></p>
-<p>Evaluation based on WikiPathways, a community-curated open database of biological pathways</p>
-<p>Nanopublication version of WikiPathways dataset:</p>
+<p>Evaluation based on <span class="cem">WikiPathways</span>, a community-curated open database of biological pathways:</p>
 <ul>
 <li>~ 10 000 nanopublications
 <li>Monthly releases over 11 months
@@ -204,10 +259,9 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 <section>
 <h3>Evaluation 2</h3>
 <p><strong><span class="cem">How well does it work on the data consumer side?</span></strong></p>
-<p>Evaluation based on DisGeNET, a database on human diseases and their related genes</p>
-<p>Nanopublication version of DisGeNET version 4.0:</p>
+<p>Evaluation based on <span class="cem">DisGeNET</span>, a database on human diseases and their related genes:</p>
 <ul>
-<li>1 414 902 nanopublications
+<li>1 414 902 nanopublications in version 4.0
 <li>Highly cited: 31 publications in 2017 (until 5 May)
 </ul>
 </section>
