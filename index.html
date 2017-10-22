@@ -77,26 +77,34 @@ text-transform: none;
 
 <section>
 <h3>Specify Input Data:<br/>Current Best Practice</h3>
+<div class="fragment">
 <p><strong><span class="cem">In papers:</span></strong></p>
 <quote>
 "... we used DisGeNET-RDF version 4.0 [32]"
 </quote>
+<quote>
+<small>[32] N. Queralt-Rosinach, J. Piñero, À. Bravo, F. Sanz, and L. I. Furlong. DisGeNET-RDF: harnessing the innovative power of the semantic web to explore the genetic basis of diseases. Bioinformatics, 32(14), 2016.</small>
+</quote>
+</div>
+<div class="fragment">
 <p><strong><span class="cem">In code:</span></strong></p>
 <pre>
 wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 # Run analysis here
 </pre>
+</div>
 </section>
 
 <section>
 <h3>Requirements and Related Work</h3>
 <p>We need:</p>
 <ul>
-<li>Linked Data <span class="cem">versioning</span></li>
+<li>Principled Linked Data <span class="cem">versioning</span></li>
 <li><span class="cem">Cryptographically reliable</span> dataset identifiers</li>
 <li>References to <span class="cem">subsets</span> of larger datasets</li>
+<li>Fine-grained <span class="cem">provenance information</span></li>
 </ul>
-<p>Related work exists for each of these points individually, but not for their combination.</p>
+<p>Related work addresses these individually but not in combination.</p>
 </section>
 
 <section>
@@ -352,7 +360,7 @@ Evaluation based on <span class="cem">DisGeNET</span>, a database on human disea
 <p>Researchers can now exactly specify their input data.</p>
 <p><strong><span class="cem">In papers:</span></strong></p>
 <quote>
-"... we used DisGeNET data [27] about these diseases"
+"... we used DisGeNET data about these diseases [27]"
 </quote>
 <quote>
 <small>[27] Nanopublications from DisGeNET v4.0.0.0 about umls:C0003507 or umls:C1956346. <span class="cem2">http://purl.org/np/RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>, 11 May 2017.</small>
@@ -375,7 +383,25 @@ np get -c -o data.trig \
 
 <section>
 <h3>Querying the Nanopublication Cloud</h3>
-<p>TODO</p>
+<p><span class="cem">Separation between Publishing and Querying:</span></p>
+<ul>
+<li>Nanopublication network for publishing <span class="cem">✓</span></li>
+<li><span class="cem">Ongoing:</span> development of query services</li>
+</ul>
+<div class="fragment">
+<p><strong>Early acknowledgements:</strong></p>
+<ul>
+<li>Loading all nanopublications in performant graph DB <span class="cem">(Michel Dumontier, Alexander Malic)</span></li>
+<li>Applying Quad Pattern Fragments <span class="cem">(Ruben Verborgh)</span></li>
+<li>Applying HDT for quads <span class="cem">(Javier Fernández)</span></li>
+</ul>
+</div>
+</section>
+
+<section>
+<h3>Thank you for Your Attention!</h3>
+<br/>
+<h3>Questions?</h3>
 </section>
 
 </div>
