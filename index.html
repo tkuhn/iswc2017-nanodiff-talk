@@ -12,6 +12,9 @@ margin-top: 0px;
 span.cem {
 color: #d66;
 }
+span.cem2 {
+color: #2a2;
+}
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -42,7 +45,7 @@ text-transform: none;
 <p>Reproducible (Linked) Data Science is complicated...</p>
 </section>
 
-<section data-background-image="img/science-bright.jpg">
+<section>
 <h3>Reproducible (Linked) Data Science is Complicated</h3>
 <p>Even just <span class="cem">specifying the used input data</span> is complicated, because:</p>
 <ul>
@@ -238,8 +241,9 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 <section>
 <h3>Evaluation 1</h3>
 <p><strong><span class="cem">How well does it work on the data publisher side?</span></strong></p>
+<div class="fragment">
 <p>
-<img class="plain" width="170pt" src="img/wikipathways.png"/>
+<img class="plain" width="400pt" src="img/wikipathways.png"/>
 <br/>
 Evaluation based on <span class="cem">WikiPathways</span>, a community-curated open database of biological pathways:</p>
 <ul>
@@ -247,9 +251,15 @@ Evaluation based on <span class="cem">WikiPathways</span>, a community-curated o
 <li>Monthly releases over 11 months
 </ul>
 <p><small><a href="http://www.wikipathways.org">http://www.wikipathways.org</a></small></p>
+</div>
 </section>
 
 <section data-transition="slide none">
+<h3>WikiPathways Versions</h3>
+<img class="plain stretch" src="img/wp-monthly0.svg"/>
+</section>
+
+<section data-transition="none">
 <h3>WikiPathways Versions</h3>
 <img class="plain stretch" src="img/wp-monthly1.svg"/>
 </section>
@@ -272,6 +282,7 @@ Evaluation based on <span class="cem">WikiPathways</span>, a community-curated o
 <section>
 <h3>Evaluation 2</h3>
 <p><strong><span class="cem">How well does it work on the data consumer side?</span></strong></p>
+<div class="fragment">
 <p>
 <img class="plain" width="500pt" src="img/disgenet.png"/>
 <br/>
@@ -281,6 +292,7 @@ Evaluation based on <span class="cem">DisGeNET</span>, a database on human disea
 <li>Highly cited: 31 publications in 2017 (until 5 May)
 </ul>
 <p><small><a href="http://www.disgenet.org">http://www.disgenet.org</a></small></p>
+</div>
 </section>
 
 <section data-transition="slide none">
@@ -293,13 +305,23 @@ Evaluation based on <span class="cem">DisGeNET</span>, a database on human disea
 <img class="plain stretch" src="img/disgenet-subsets-hist.svg"/>
 </section>
 
-<section>
+<section data-transition="slide none">
+<h3>Sizes of DisGeNET Subsets (Compared to Decontextualized Full Dataset)</h3>
+<img class="plain stretch" src="img/disgenet-subsets1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Sizes of DisGeNET Subsets (Compared to Decontextualized Full Dataset)</h3>
+<img class="plain stretch" src="img/disgenet-subsets2.svg"/>
+</section>
+
+<section data-transition="none">
 <h3>Sizes of DisGeNET Subsets (Compared to Decontextualized Full Dataset)</h3>
 <img class="plain stretch" src="img/disgenet-subsets.svg"/>
 </section>
 
 <section>
-<h3>Download of Typical Subset</h3>
+<h3>Time to Download Typical Subset</h3>
 <p>Downloading full dataset from DisGeNET server</p>
 <p><strong>VERSUS</strong></p>
 <p>Downloading 18 098 nanopublications through the server network</p>
@@ -311,25 +333,25 @@ Evaluation based on <span class="cem">DisGeNET</span>, a database on human disea
 <p>Researchers can now exactly specify their input data.</p>
 <p><strong><span class="cem">In papers:</span></strong></p>
 <quote>
-"... we used DisGeNET [27]"
-<br/>
-<small>[27] Nanopubs extracted from DisGeNET v4.0.0.0. Nanopublication index http://purl.org/np/RAu0PUrg-M8HxkOiYRXkTg7r9fgOIzFZNINj8q7ywN
-rdM, 9 May 2017.</small>
+"... we used DisGeNET data [27] about these diseases"
+</quote>
+<quote>
+<small>[27] Nanopublications from DisGeNET v4.0.0.0 about umls:C0003507 or umls:C1956346. <span class="cem2">http://purl.org/np/RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>, 11 May 2017.</small>
 </quote>
 <p><strong><span class="cem">In code:</span></strong></p>
 <pre>
 np get -c -o data.trig \
-  RAxMyDRaM8RmKGNiEe7dQPRUTuz616iI-N2T-H3MPYmXk
+  <span class="cem2">RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>
 # Run analysis here
 </pre>
 </section>
 
 <section>
-<h3>Nanopublication Datasets Pay Off</h3>
-<p>Price of nanopublication approach is offset by:</p>
+<h3>Nanopublication Overhead Disappears</h3>
+<p><span class="cem">Price of nanopublications is offset by:</span></p>
 <ul>
 <li>the benefits of incremental versioning</li>
-<li>and by being able to refer to exactly the needed subset of a given dataset</li>
+<li>by being able to refer to needed subset</li>
 </section>
 
 <section>
